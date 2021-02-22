@@ -1,5 +1,5 @@
 
-# About
+## About
 
 This is an update and expansion of TeX without TeX
 (http://wiki.luatex.org/index.php/TeX_without_TeX) --- using TeX's
@@ -20,20 +20,20 @@ be improved.  All questions, comments, suggestions, and corrections
 will be appreciated. You can reach me at "destiny6 <AT> mac <DOT>
 com".
 
-# Pre-requisites
+## Pre-requisites
 
 This system requires the luatex-plain format (from ConTeXt), so that
 we have access to Open Type Fonts and other goodies. This is what I
 did on my system:
 
-# Find the luatex-plain.tex file. On my system (with TeX-Live 2020)
+#### Find the luatex-plain.tex file. On my system (with TeX-Live 2020)
 it was at: 
 
   ```
   /usr/local/share/texmf-dist/tex/generic/context/luatex/luatex-plain.tex
   ```
 
-# If you just build a format file, 
+### If you just build a format file, 
 
   ```
   luatex --ini /usr/local/share/texmf-dist/tex/generic/context/luatex/luatex-plain.tex
@@ -47,13 +47,13 @@ it was at:
   doas mv /usr/local/share/texmf-dist/tex/generic/context/luatex/luatex-fonts-merged.lua /usr/local/share/texmf-dist/tex/generic/context/luatex/luatex-fonts-merged.lua.bak
   ```
 
-# Now, build the format file. 
+### Now, build the format file. 
 
   ```
   luatex --ini /usr/local/share/texmf-dist/tex/generic/context/luatex/luatex-plain.tex
   ```
 
-# We are almost done. If the resulting format file (luatex-plain.fmt)
+### We are almost done. If the resulting format file (luatex-plain.fmt)
 is in the current working directory, you can use it with something
 like: 
 
@@ -61,16 +61,16 @@ like:
   luatex --fmt luatex-plain test
   ```
 
-# But, this is too restrictive.
+### But, this is too restrictive.
 
-  ## Create a new executable with the name luatex-plain. Something
+  #### Create a new executable with the name luatex-plain. Something
   like: 
 
     ```
     ln -s `which luatex` /usr/local/bin/luatex-plain
     ```
 
-  ## When you try to invoke it: 
+  #### When you try to invoke it: 
 
     ```
     luatex-plain test
