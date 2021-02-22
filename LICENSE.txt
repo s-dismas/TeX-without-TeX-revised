@@ -1,0 +1,29 @@
+
+Copyright (c) 2021 Toadstone Enterprises.
+
+-----------------------------------------------------------------
+
+The stone must be taken out of the head alive, before the Toad be
+dead, with a peece of cloth of the colour of red Skarlet,
+where-withall the toads are much delighted, so that they stretch out
+themselves as it were in sport upon that cloth. They cast out the
+stone of their head, but instantly they sup it up againe, unlesse it
+be taken from them through some secrete hole in the said cloth,
+whereby it falleth into a cestern or vessell of water, into which the
+Toade dareth not enter, by reason of the coldnes of the water.
+
+-----------------------------------------------------------------
+
+Permission to use, copy, modify, and/or distribute this software for
+any purpose with or without fee is hereby granted, provided that the
+above copyright notice and this permission notice appear in all
+copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL
+WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE
+AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
+DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR
+PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
