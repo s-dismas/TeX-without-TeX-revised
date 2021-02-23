@@ -26,78 +26,56 @@ This system requires the luatex-plain format (from ConTeXt), so that
 we have access to Open Type Fonts and other goodies. This is what I
 did on my system:
 
-#### Find the luatex-plain.tex file. On my system (with TeX-Live 2020)
+##### Find the luatex-plain.tex file. On my system (with TeX-Live 2020)
 it was at: 
 
-  ```
-  /usr/local/share/texmf-dist/tex/generic/context/luatex/luatex-plain.tex
-  ```
+    /usr/local/share/texmf-dist/tex/generic/context/luatex/luatex-plain.tex
 
-### If you just build a format file, 
 
-  ```
-  luatex --ini /usr/local/share/texmf-dist/tex/generic/context/luatex/luatex-plain.tex
-  ``` 
+##### If you just build a format file, 
+
+    luatex --ini /usr/local/share/texmf-dist/tex/generic/context/luatex/luatex-plain.tex
   
-  you will probably get warnings about using the "merged" file, and not
-  the more current and supported files. Delete, move, or rename this
-  file. On my system I did: 
+you will probably get warnings about using the "merged" file, and not
+the more current and supported files. Delete, move, or rename this
+file. On my system I did: 
 
-  ```
-  doas mv /usr/local/share/texmf-dist/tex/generic/context/luatex/luatex-fonts-merged.lua /usr/local/share/texmf-dist/tex/generic/context/luatex/luatex-fonts-merged.lua.bak
-  ```
+    doas mv /usr/local/share/texmf-dist/tex/generic/context/luatex/luatex-fonts-merged.lua /usr/local/share/texmf-dist/tex/generic/context/luatex/luatex-fonts-merged.lua.bak
 
-### Now, build the format file. 
+##### Now, build the format file. 
 
-  ```
-  luatex --ini /usr/local/share/texmf-dist/tex/generic/context/luatex/luatex-plain.tex
-  ```
+    luatex --ini /usr/local/share/texmf-dist/tex/generic/context/luatex/luatex-plain.tex
 
-### We are almost done. If the resulting format file (luatex-plain.fmt)
+##### We are almost done. If the resulting format file (luatex-plain.fmt)
 is in the current working directory, you can use it with something
 like: 
 
-  ```
-  luatex --fmt luatex-plain test
-  ```
+    luatex --fmt luatex-plain test
 
-### But, this is too restrictive.
+##### But, this is too restrictive.
 
-  #### Create a new executable with the name luatex-plain. Something
+###### Create a new executable with the name luatex-plain. Something
   like: 
 
-    ```
     ln -s `which luatex` /usr/local/bin/luatex-plain
-    ```
 
-  #### When you try to invoke it: 
+###### When you try to invoke it: 
 
-    ```
     luatex-plain test
-    ``` 
 
-  it will fail with a message about failing to find the proper
-  format file. There should be a line something like: 
+it will fail with a message about failing to find the proper
+format file. There should be a line something like: 
 
-    ```
     mktexfmt [INFO]: writing formats under ~/.texlive2020/texmf-var/web2c
-    ``` 
 
-  so, copy the format file to that location: 
+so, copy the format file to that location: 
 
-    ```
     cp luatex-plain.fmt ~/.texlive2020/texmf-var/web2c/
-    ``` 
 
-  now, this should work: 
+now, this should work: 
 
-    ```
     luatex-plain test
-    ``` 
 
-    Finally, run mtxrun to generate a fonts database: 
+Finally, run mtxrun to generate a fonts database: 
 
-    ```
     mtxrun --script fonts --reload --simple
-    ```
-
